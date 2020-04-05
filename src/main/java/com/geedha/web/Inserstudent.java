@@ -32,11 +32,12 @@ public class Inserstudent extends HttpServlet{
         String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
         String phonenumber =req.getParameter("phonenumber");
-        pw.println(name);
-        /*System.out.println(email);
+    
+        System.out.println(name);
+        System.out.println(email);
         System.out.println(password);
         System.out.println(cgpa);
-        System.out.println(phonenumber);*/
+        System.out.println(phonenumber);
         /*String name = "haaii";
         String email  = "dsd";
         String password = "434fdf";ys
