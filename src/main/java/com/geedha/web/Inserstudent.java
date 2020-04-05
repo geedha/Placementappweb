@@ -21,8 +21,8 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 public class Inserstudent extends HttpServlet{
     
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doPost(req,resp);
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setURL("jdbc:mysql://remotemysql.com:3306/Ykiry88Nqj");
         dataSource.setUser("Ykiry88Nqj");
@@ -32,12 +32,17 @@ public class Inserstudent extends HttpServlet{
         String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
         String phonenumber =req.getParameter("phonenumber");
-        /*String name = "paavi";
+        System.out.println(name);
+        System.out.println(email);
+        System.out.println(password);
+        System.out.println(cgpa);
+        System.out.println(phonenumber);
+        /*String name = "haaii";
         String email  = "dsd";
-        String password = "434fdf";
+        String password = "434fdf";ys
         String cgpa ="32";
-        String phonenumber ="4343434";
-        PrintWriter pw = resp.getWriter();*/
+        String phonenumber ="4343434";*/
+        PrintWriter pw = resp.getWriter();
             
         try{
         
@@ -50,7 +55,7 @@ public class Inserstudent extends HttpServlet{
             stmt.executeUpdate("insert into  place_student values ('"+name+"','"+email+"', '"+password+"', '"+cgpa+"', '"+phonenumber+"')"); 
             
             System.out.println("Queeeee");
-            PrintWriter pw = resp.getWriter();
+            
 
             pw.println("Done");
         }
