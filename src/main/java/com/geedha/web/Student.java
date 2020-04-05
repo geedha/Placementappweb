@@ -4,12 +4,12 @@ public class Student {
     private String email;
     private String password;
     private float cgpa;
-    private int phonenumber;
+    private long phonenumber;
 
     public Student(){
 
     }
-    public Student(String name, String email,String password,float cgpa, int phonenumber)
+    public Student(String name, String email,String password,float cgpa, long phonenumber)
     {
         this.name = name;
         this.email = email;
@@ -49,10 +49,10 @@ public class Student {
     public void setCgpa(float cgpa){
         this.cgpa = cgpa;
     }
-    public int getPhonenumber(){
+    public long getPhonenumber(){
         return this.phonenumber;
     }
-    public void setPhonenumber(int phonenumber){
+    public void setPhonenumber(Long phonenumber){
         this.phonenumber = phonenumber;
     }
 
