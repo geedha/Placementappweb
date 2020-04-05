@@ -24,11 +24,11 @@ public class Inserstudent extends HttpServlet{
         dataSource.setURL("jdbc:mysql://remotemysql.com:3306/Ykiry88Nqj");
         dataSource.setUser("Ykiry88Nqj");
         dataSource.setPassword("82aXSBlvtP");
-        String name = "Sharada";//req.getParameter("key1");
-        String email = "sharada.india@gmail.com";//req.getParameter("key2");
-        String password = "sha@1232";//req.getParameter("key3");
-        String cgpa = "9.30";//req.getParameter("key4");
-        String phonenumber = "944212931";//req.getParameter("key5");
+        String name = req.getParameter("name");
+        String email = req.getParameter("email");
+        String password = req.getParameter("password");
+        String cgpa = req.getParameter("cgpa");
+        String phonenumber =req.getParameter("phonenumber");
         try{
             Connection con = dataSource.getConnection();
             System.out.println("Connection Ess");
