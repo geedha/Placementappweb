@@ -16,7 +16,7 @@ import java.util.List;
 
 import com.google.gson.Gson;
 import com.mysql.cj.jdbc.MysqlDataSource;
-@WebServlet("/addstudentlist")
+@WebServlet("\studentadd")
 public class Inserstudent extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
