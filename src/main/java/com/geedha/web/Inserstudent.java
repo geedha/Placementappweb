@@ -23,7 +23,7 @@ public class Inserstudent extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
 
-        String name = req.getParameter("name");
+        String name = req.getParameter("key1");
         String email ="insis@gmail.com"; //req.getParameter("email");
         /*String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
