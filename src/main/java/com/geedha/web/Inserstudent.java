@@ -19,19 +19,18 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 @WebServlet("/addstudent")
 public class Inserstudent extends HttpServlet{
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setURL("jdbc:mysql://remotemysql.com:3306/Ykiry88Nqj");
-        dataSource.setUser("Ykiry88Nqj");
-        dataSource.setPassword("82aXSBlvtP");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+
+        
         String name = req.getParameter("name");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
         String phonenumber =req.getParameter("phonenumber");
         try{
-            Connection con = dataSource.getConnection();
-            System.out.println("Connection Ess");
+            Connection con = (Connection) getServletContext().getAttribute("dbconnection");           
+             System.out.println("Connection Ess");
             System.out.println("inte");
             Statement stmt = con.createStatement();
             System.out.println("inte");
