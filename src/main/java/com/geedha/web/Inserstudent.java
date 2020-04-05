@@ -24,7 +24,7 @@ public class Inserstudent extends HttpServlet{
         
 
         String name = req.getParameter("name");
-        String email = req.getParameter("email");
+        String email ="insis@gmail.com"; //req.getParameter("email");
         /*String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
         String phonenumber =req.getParameter("phonenumber");*/
