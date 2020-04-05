@@ -22,7 +22,7 @@ public class Inserstudent extends HttpServlet{
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
+        PrintWriter pw = resp.getWriter();
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setURL("jdbc:mysql://remotemysql.com:3306/Ykiry88Nqj");
         dataSource.setUser("Ykiry88Nqj");
@@ -32,17 +32,17 @@ public class Inserstudent extends HttpServlet{
         String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
         String phonenumber =req.getParameter("phonenumber");
-        System.out.println(name);
-        System.out.println(email);
+        pw.println(name);
+        /*System.out.println(email);
         System.out.println(password);
         System.out.println(cgpa);
-        System.out.println(phonenumber);
+        System.out.println(phonenumber);*/
         /*String name = "haaii";
         String email  = "dsd";
         String password = "434fdf";ys
         String cgpa ="32";
         String phonenumber ="4343434";*/
-        PrintWriter pw = resp.getWriter();
+        
             
         try{
         
