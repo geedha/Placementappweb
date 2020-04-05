@@ -19,7 +19,7 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 @WebServlet("/addstudentlist")
 public class Inserstudent extends HttpServlet{
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
 
         
