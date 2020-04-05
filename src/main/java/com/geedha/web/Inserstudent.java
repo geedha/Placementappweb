@@ -27,17 +27,17 @@ public class Inserstudent extends HttpServlet{
         dataSource.setURL("jdbc:mysql://remotemysql.com:3306/Ykiry88Nqj");
         dataSource.setUser("Ykiry88Nqj");
         dataSource.setPassword("82aXSBlvtP");
-        /*String name = req.getParameter("name");
+        String name = req.getParameter("name");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
-        String phonenumber =req.getParameter("phonenumber");*/
-        String name = "paavi";
+        String phonenumber =req.getParameter("phonenumber");
+        /*String name = "paavi";
         String email  = "dsd";
         String password = "434fdf";
         String cgpa ="32";
         String phonenumber ="4343434";
-        PrintWriter pw = resp.getWriter();
+        PrintWriter pw = resp.getWriter();*/
             
         try{
         
@@ -50,6 +50,7 @@ public class Inserstudent extends HttpServlet{
             stmt.executeUpdate("insert into  place_student values ('"+name+"','"+email+"', '"+password+"', '"+cgpa+"', '"+phonenumber+"')"); 
             
             System.out.println("Queeeee");
+            PrintWriter pw = resp.getWriter();
 
             pw.println("Done");
         }
