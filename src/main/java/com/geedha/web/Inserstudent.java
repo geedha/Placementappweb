@@ -18,31 +18,39 @@ import com.google.gson.Gson;
 import com.mysql.cj.jdbc.MysqlDataSource;
 @WebServlet("/studentadd")
 public class Inserstudent extends HttpServlet{
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-    } 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-        PrintWriter pw = resp.getWriter(); 
-        
-        String name = req.getParameter("name");
+
+        /*String name = req.getParameter("name");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
-        String phonenumber =req.getParameter("phonenumber");
-            pw.println("Done");
+        String phonenumber =req.getParameter("phonenumber");*/
+        String name = "sdd";
+        String email  = "dsd";
+        String password = "434fdf";
+        String cgpa ="32";
+        String phonenumber ="4343434";
+        MysqlDataSource dataSource = new MysqlDataSource();
+        dataSource.setURL("jdbc:mysql://remotemysql.com:3306/Ykiry88Nqj");
+        dataSource.setUser("Ykiry88Nqj");
+        dataSource.setPassword("82aXSBlvtP");
+    
+        ///String name = req.getParameter("key1");
+        PrintWriter pw = resp.getWriter();
 
-        try{
-            Connection con = (Connection) getServletContext().getAttribute("dbconnection");  
-            pw.println("Done");         
-             System.out.println("Connection Ess");
+        pw.println(name);
+        try{  
+            /* Class.forName("com.mysql.jdbc.Driver"); */
+            Connection con=dataSource.getConnection();
+            System.out.println("Connection Ess");
             System.out.println("inte");
-            Statement stmt = con.createStatement();
-            System.out.println("inte");
+            //here sonoo is database name, root is username and password  
+            Statement stmt=con.createStatement();  
 
-            stmt.executeUpdate("INSERT INTO place_student VALUES ('"+name+"','"+email+"', '"+password+"', '"+cgpa+"', '"+phonenumber+"');"); 
+            stmt.executeUpdate("insert into  place_student values ('"+name+"','"+email+"', '"+password+"', '"+cgpa+"', '"+phonenumber+"')"); 
             
             System.out.println("Queeeee");
 
