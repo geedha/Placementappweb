@@ -16,7 +16,7 @@ import java.util.List;
 
 import com.google.gson.Gson;
 import com.mysql.cj.jdbc.MysqlDataSource;
-@WebServlet("/addstudent")
+@WebServlet("/addstudentlist")
 public class Inserstudent extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,6 +28,8 @@ public class Inserstudent extends HttpServlet{
         String password = req.getParameter("password");
         String cgpa = req.getParameter("cgpa");
         String phonenumber =req.getParameter("phonenumber");
+        
+
         try{
             Connection con = (Connection) getServletContext().getAttribute("dbconnection");           
              System.out.println("Connection Ess");
@@ -35,7 +37,7 @@ public class Inserstudent extends HttpServlet{
             Statement stmt = con.createStatement();
             System.out.println("inte");
 
-            stmt.executeUpdate("INSERT INTO `place_student` (`name`, `email`, `password`, `cgpa`, `phonenumber`) VALUES ('"+name+"','"+email+"', '"+password+"', '"+cgpa+"', '"+phonenumber+"');"); 
+            stmt.executeUpdate("INSERT INTO place_student VALUES ('"+name+"','"+email+"', '"+password+"', '"+cgpa+"', '"+phonenumber+"');"); 
             PrintWriter pw = resp.getWriter(); 
             System.out.println("Queeeee");
 
