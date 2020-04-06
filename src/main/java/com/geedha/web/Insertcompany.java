@@ -21,7 +21,8 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 public class Insertcompany extends HttpServlet{
     
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doPost(req, resp);
         PrintWriter pw = resp.getWriter();
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setURL("jdbc:mysql://remotemysql.com:3306/Ykiry88Nqj");
