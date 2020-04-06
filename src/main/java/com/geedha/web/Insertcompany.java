@@ -28,16 +28,14 @@ public class Insertcompany extends HttpServlet{
         dataSource.setURL("jdbc:mysql://remotemysql.com:3306/Ykiry88Nqj");
         dataSource.setUser("Ykiry88Nqj");
         dataSource.setPassword("82aXSBlvtP");
-       /* String name = req.getParameter("name");
+       String name = req.getParameter("name");
         String email = req.getParameter("email");
-        String password = req.getParameter("password");*/
+        String password = req.getParameter("password");
         
     
        
         
-        String name = "haaii";
-        String email  = "dsd";
-        String password = "434fdf";
+        
        
         
             
